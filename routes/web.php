@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/info', function () {
+   phpinfo();
+});
+
+
+
+Route::get('api','Api\ApiController@apiuser');  //查询接口数据
+Route::post('api/u','Api\ApiController@reg');  //接口添加
